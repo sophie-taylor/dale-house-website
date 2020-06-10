@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
+		<title>Dale House | Availability and Booking</title>
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Custom styles for this template -->
+		<link href="../css/owl.carousel.css" rel="stylesheet">
+		<link href="../css/owl.theme.default.min.css"  rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+
+
+<style>
+	
+	.b {
+	  color: #f2f2f2;
+	  padding: 5px 20px;
+	  text-decoration: none;
+	  font-style: oblique;
+	  font-size: 15px;
+	  text-align: center;
+	}	
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	.row > .column {
+	  padding: 0 8px;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.column {
+	  float: left;
+	  width: 20%;
+	}
+
+	.column2 {
+	  float: left;
+	  width: 20%;
+	}
+	
+	/* The Modal (background) */
+	.modal {
+	  display: none;
+	  position: fixed;
+	  z-index: 1;
+	  padding-top: 10px;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: auto;
+	  background-color: black;
+	}
+
+	/* Modal Content */
+	.modal-content {
+	  position: relative;
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 0;
+	  width: 60%;
+	  max-width: 1200px;
+	}
+
+	/* The Close Button */
+	.close {
+	  color: white;
+	  position: absolute;
+	  top: 10px;
+	  right: 25px;
+	  font-size: 35px;
+	  font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #999;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+
+	.mySlides {
+	  display: none;
+	}
+
+	.cursor {
+	  cursor: pointer;
+	}
+
+	/* Next & previous buttons */
+	.prev,
+	.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 20px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+
+	.caption-container {
+	  text-align: center;
+	  background-color: black;
+	  padding: 2px 1px;
+	  color: white;
+	}
+
+	.demo {
+	  opacity: 0.6;
+	}
+
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+
+	img.hover-shadow {
+	  transition: 0.3s;
+	}
+
+	.hover-shadow:hover {
+	  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.9);
+	}
+    
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: green;
+    }
+
+
+</style>
+
+	</head>
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<img src="../logo.png" alt="Dale house logo" style="width:175px">
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/house/">The House</a>
+						</li>
+						<li>
+							<a href="/village/">The Village</a>
+						</li>	
+						<li>
+							<a href="/activities/">Activities</a>
+						</li>	
+						<li>
+							<a style="color:#4CAF50; font-weight:bolder" href="/booking/">Availability & Booking</a>
+						</li>	
+						<li>
+							<a href="/reviews/">Reviews</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- /.navbar-collapse -->
+			</div>
+			
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- Header -->
+
+	
+		<section class="light-bg">
+		
+			<div class="section-title">
+				<center><h2><br>Availability and Booking</h2></center>
+			</div>	
+            
+            <center style="font-size:18px"><strong>Dale House availability and enquiry form can be found by clicking the button below.
+            <br><br>
+            <a style="color: white" class="button" href="https://www.yorlive.co.uk/webform4.aspx?UID=dalehouse&propid=57&pf=Weekly" target="_blank">Dale House Enquiry Form</a></strong></center>
+            <br><br>
+            
+			<center style="font-size:18px; padding:20px"><strong>To secure your booking fill in the Dale House booking form, available to download below.
+            <br><br>
+            <a style="color: white" class="button" href="booking_form.pdf" target="_blank">Dale House Booking Form</a></strong></center>
+            
+		</section>
+		
+		<section class="bg">
+		<center><p>Dale House can be booked for a 3 night weekend (Friday to Monday), 4 nights midweek (Monday to Friday) or for the full week<br>
+		To make a reservation contact Nigel & Susan Taylor:</p></center><br><br>
+				<div class="row"><center>
+					<div class="col-md-4">
+						<div class="section-text">
+							<h4>By Post</h4>
+							<p><i class="fa fa-envelope"></i> 7 High Street, Gargrave, Skipton,<br>North Yorkshire, BD23 3RA</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="section-text">
+							<h4>By Phone</h4>
+							<p><i class="fa fa-phone"></i> Landline: 01756 749330</p>
+							<p><i class="fa fa-phone"></i> Mobile: 07810 090861</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="section-text">
+							<h4>By Email</h4>
+							<p><i class="fa fa-envelope"></i> info@dale-house.co.uk</p>
+						</div>
+					</div>
+
+				</center></div>
+		</section>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/owl.carousel.min.js"></script>
+		<script src="../js/cbpAnimatedHeader.js"></script>
+		<script src="../js/jquery.appear.js"></script>
+		<script src="../js/SmoothScroll.min.js"></script>
+		<script src="../js/theme-scripts.js"></script>
+	</body>
+</html>
